@@ -16,6 +16,9 @@ public class Neighbour {
     /** Avatar */
     private String avatarUrl;
 
+    /**Favorite */
+    private Boolean favorite;
+
     /**
      * Constructor
      * @param id
@@ -26,6 +29,7 @@ public class Neighbour {
         this.id = id;
         this.name = name;
         this.avatarUrl = avatarUrl;
+        this.favorite = false;
     }
 
     public Integer getId() {
@@ -51,6 +55,10 @@ public class Neighbour {
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
     }
+
+    public Boolean getFavorite() { return favorite; }
+
+    public void setFavorite(Boolean favorite) { this.favorite = favorite; }
 
     @Override
     public boolean equals(Object o) {

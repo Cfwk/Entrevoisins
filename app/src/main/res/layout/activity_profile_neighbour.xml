@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8C8C8"
+    android:orientation="horizontal">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/returnButton"
+        android:layout_width="66dp"
+        android:layout_height="91dp"
+        android:clickable="true"
+        tools:srcCompat="@android:drawable/ic_menu_revert" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/favoriteButton"
+            android:layout_width="66dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="335dp"
+            android:layout_marginTop="-33dp"
+            android:clickable="true"
+            tools:srcCompat="@drawable/ic_star_border_white_24dp" />
+
+        <RelativeLayout
+        android:layout_width="392dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/cardview_light_background"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="70dp" 
+                android:text="Name of the neighbour"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="70dp"
+                android:text="Adress"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="110dp"
+                android:text="Telephone"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="150dp"
+                android:layout_height="40dp"
+                android:text="Facebook"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+        android:layout_width="392dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/cardview_light_background"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="70dp"
+                android:text="A propos de moi"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="70dp"
+                android:text="A propos de moi texte"
+                />
+
+        </RelativeLayout>
+        
+</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textSize="50dp"
+        android:text="Prenom"
+        android:textColor="@color/cardview_light_background"
+        android:layout_marginTop="205dp" />
+</RelativeLayout>
