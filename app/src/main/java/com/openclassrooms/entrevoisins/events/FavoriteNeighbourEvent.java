@@ -18,9 +18,6 @@ public class FavoriteNeighbourEvent {
      */
     public FavoriteNeighbourEvent(Neighbour neighbour) {
         this.neighbour = neighbour;
-        if (neighbour.getFavorite()!=true)
-            neighbour.setFavorite(true);
-        else neighbour.setFavorite(false);
     }
 }
 

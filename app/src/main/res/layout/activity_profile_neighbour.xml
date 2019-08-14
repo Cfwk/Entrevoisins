@@ -22,20 +22,20 @@
             android:id="@+id/imageProfile"
             android:layout_width="match_parent"
             android:layout_height="275dp"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
  />
 
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/favoriteButton"
-            android:layout_width="200px"
-            android:layout_height="200px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabCustomSize="60dp"
             android:layout_marginTop="-120px"
             android:clickable="true"
             android:layout_marginRight="20px"
             android:layout_gravity="right"
             android:backgroundTint="#FFFF"
-            android:scaleType="fitXY"
              />
 
         <RelativeLayout
@@ -49,6 +49,33 @@
         android:paddingRight="20dp"
         android:orientation="vertical"
         >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:layout_marginTop="70dp"
+                app:srcCompat="@drawable/ic_location_on_black_24dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:layout_marginTop="110dp"
+                app:srcCompat="@drawable/ic_phone_black_24dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:layout_marginTop="150dp"
+                app:srcCompat="@drawable/ic_public_black_24dp"
+                />
             
             <TextView
                 android:id="@+id/nameNeighbour"
@@ -65,18 +92,21 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="70dp"
                 android:text="Adresse"
+                android:layout_marginLeft="40dp"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="110dp"
                 android:text="Telephone"
+                android:layout_marginLeft="40dp"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_marginTop="150dp"
                 android:layout_height="40dp"
                 android:text="Facebook"
+                android:layout_marginLeft="40dp"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -124,6 +154,7 @@
         android:clickable="true"
         android:scaleType="fitXY"
         android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp"
         />
 
     <TextView
@@ -132,6 +163,7 @@
         android:layout_height="70dp"
         android:textSize="50dp"
         android:text="Prenom"
+        android:layout_marginLeft="10dp"
         android:textColor="@color/cardview_light_background"
         android:layout_marginTop="205dp" />
 

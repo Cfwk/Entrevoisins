@@ -29,6 +29,13 @@ public interface NeighbourApiService {
     void favoriteNeighbour (Neighbour neighbour);
 
     /**
+     *  Return the boolean favorite of the neighbour
+     * @param  neighbour
+     */
+
+    boolean isFavorite (Neighbour neighbour);
+
+    /**
      * Get only favorite Neighbours
      * @return {@link List}
      */
