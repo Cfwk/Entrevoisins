@@ -23,7 +23,6 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.List;
 
-import static android.app.Activity.RESULT_OK;
 
 
 public class NeighbourFragment extends Fragment {
@@ -31,7 +30,6 @@ public class NeighbourFragment extends Fragment {
     private NeighbourApiService mApiService;
     private List<Neighbour> mNeighbours;
     private RecyclerView mRecyclerView;
-    public static final int NEIGHBOUR_REQUEST_CODE = 42;
 
 
     /**

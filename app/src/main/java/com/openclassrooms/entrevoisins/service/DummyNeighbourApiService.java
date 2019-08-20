@@ -35,7 +35,6 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
         if (neighbours.get(neighbours.indexOf(neighbour)).getFavorite()!=true)
             neighbours.get(neighbours.indexOf(neighbour)).setFavorite(true);
         else neighbours.get(neighbours.indexOf(neighbour)).setFavorite(false);
-        System.out.println("A PORRA ADASDIANSDAISDASBSDFASDFASDF   "+neighbour.toString());
     }
 
     @Override
