@@ -82,6 +82,9 @@ public class NeighboursListTest {
         assertThat(mActivity, notNullValue());
         mNeighbourApiService = DI.getNeighbourApiService();
         Neighbours = mNeighbourApiService.getNeighbours();
+        mNeighbourApiService.favoriteNeighbour(Neighbours.get(0));
+        mNeighbourApiService.favoriteNeighbour(Neighbours.get(1));
+        favoriteNeighbours = mNeighbourApiService.getFavoriteNeighbours();
     }
 
     /**
@@ -94,18 +97,11 @@ public class NeighboursListTest {
                 .check(matches(hasMinimumChildCount(1)));
     }
 
-    @Test
+
     /**
      *  We ensure that our recyclerview of favorite tab only display favorite items
      */
-
-    @Before
-    public  void favoriteItems() {
-        mNeighbourApiService.favoriteNeighbour(Neighbours.get(0));
-        mNeighbourApiService.favoriteNeighbour(Neighbours.get(1));
-        favoriteNeighbours = mNeighbourApiService.getFavoriteNeighbours();
-    }
-
+    @Test
     public void myFavoriteNeighboursList_shouldOnlyHaveFavoriteNeighbours() {
 
         // First scroll to the position that needs to be matched and click on it.
