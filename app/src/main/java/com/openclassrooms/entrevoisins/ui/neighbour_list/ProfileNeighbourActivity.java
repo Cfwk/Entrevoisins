@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -35,7 +36,7 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
     @BindView(R.id.nameHeader)
     TextView mNameHeader;
     @BindView(R.id.returnButton)
-    ImageButton mReturnButton;
+    Toolbar mReturnButton;
     @BindView(R.id.favoriteButton)
     FloatingActionButton mFavoriteButton;
     @BindView(R.id.imageProfile)
@@ -60,13 +61,13 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_neighbour);
         ButterKnife.bind(this);
-        mReturnButton.setOnClickListener(new View.OnClickListener() {
+        mReturnButton.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-
             }
         });
+
         mFavoriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

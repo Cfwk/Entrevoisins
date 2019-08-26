@@ -66,9 +66,8 @@ public class NeighboursListTest {
     // This is fixed
     private static int ITEMS_COUNT = 12;
     private NeighbourApiService mNeighbourApiService;
-    private List<Neighbour>favoriteNeighbours;
     private List<Neighbour>Neighbours;
-    private int i;
+    private int FAVORITE_COUNT;
 
     private ListNeighbourActivity mActivity;
 
@@ -82,9 +81,10 @@ public class NeighboursListTest {
         assertThat(mActivity, notNullValue());
         mNeighbourApiService = DI.getNeighbourApiService();
         Neighbours = mNeighbourApiService.getNeighbours();
+        FAVORITE_COUNT = mNeighbourApiService.getFavoriteNeighbours().size();
         mNeighbourApiService.favoriteNeighbour(Neighbours.get(0));
         mNeighbourApiService.favoriteNeighbour(Neighbours.get(1));
-        favoriteNeighbours = mNeighbourApiService.getFavoriteNeighbours();
+        FAVORITE_COUNT =+2;
     }
 
     /**
@@ -105,10 +105,9 @@ public class NeighboursListTest {
     public void myFavoriteNeighboursList_shouldOnlyHaveFavoriteNeighbours() {
 
         // First scroll to the position that needs to be matched and click on it.
-        i = 2;
         onView(withText("Favorites")).perform(click());
         onView(allOf(withId(R.id.list_neighbours), isDisplayed()))
-                .check(withItemCount(i));
+                .check(withItemCount(FAVORITE_COUNT));
 
     }
 
