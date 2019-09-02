@@ -146,19 +146,10 @@
         </RelativeLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/favoriteButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                app:fabCustomSize="60dp"
-                android:clickable="true"
-                android:layout_marginRight="15dp"
-                android:backgroundTint="#FFFF"
-                />
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
@@ -197,4 +188,15 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/favoriteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="60dp"
+        android:clickable="true"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="#FFFF"
+        app:layout_anchor="@id/toolbar"
+        app:layout_anchorGravity="end|bottom"
+        />
 </android.support.design.widget.CoordinatorLayout>
